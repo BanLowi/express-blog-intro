@@ -8,7 +8,31 @@ const posts = [
     {
         title: "Ciambellone",
         content: "Un bellissimo ciambellone caldo",
-        image: "images/ciambellone.jpeg",
+        image: "/images/ciambellone.jpeg",
+        tags: [
+            "buono", "grasso"
+        ]
+    },
+    {
+        title: "Cracker Barbabiet",
+        content: "Un bellissimo ciambellone caldo",
+        image: "/images/ciambellone.jpeg",
+        tags: [
+            "buono", "grasso"
+        ]
+    },
+    {
+        title: "Ciambellone",
+        content: "Un bellissimo ciambellone caldo",
+        image: "/images/ciambellone.jpeg",
+        tags: [
+            "buono", "grasso"
+        ]
+    },
+    {
+        title: "Ciambellone",
+        content: "Un bellissimo ciambellone caldo",
+        image: "/images/ciambellone.jpeg",
         tags: [
             "buono", "grasso"
         ]
@@ -22,7 +46,22 @@ app.get("/", (req, res) => {
 
 app.get("/bacheca", (req, res) => {
 
-    res.send(`<img src="/images/ciambellone.jpeg">`);
+    const html = posts.map(post =>
+        `
+        <h1>${post.title}</h1>
+        <img src=${post.image} alt=${post.title}>
+        <p>${post.content}</p>
+        <div> 
+        
+        ${post.tags.map(tag =>
+            `
+        <span>${tag}</span>
+        `).join("")}
+        </div>
+        `
+    ).join("");
+
+    res.send(html)
 })
 
 app.listen(port, () => {
