@@ -58,14 +58,13 @@ app.get("/bacheca", (req, res) => {
         `
         <h1>${post.title}</h1>
         <img src=${post.image} alt=${post.title}>
-        <p>${post.content}</p>
-        <div> 
-        
+        <p>${post.content}</p> 
+        <ul>
         ${post.tags.map(tag =>
             `
-        <span>${tag}</span>
+        <li>${tag}</li>
         `).join("")}
-        </div>
+        </ul>
         `
     ).join("");
 
