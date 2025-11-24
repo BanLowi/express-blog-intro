@@ -7,34 +7,42 @@ app.use(express.static("public"));
 const posts = [
     {
         title: "Ciambellone",
-        content: "Un bellissimo ciambellone caldo",
+        content: "Un soffice e profumato ciambellone fatto in casa, perfetto per la colazione o la merenda",
         image: "/images/ciambellone.jpeg",
         tags: [
-            "buono", "grasso"
+            "dolce", "colazione", "fatto in casa"
         ]
     },
     {
-        title: "Cracker Barbabiet",
-        content: "Un bellissimo ciambellone caldo",
-        image: "/images/ciambellone.jpeg",
+        title: "Cracker Barbabietola",
+        content: "Cracker croccanti e colorati alla barbabietola, ideali per un aperitivo salutare",
+        image: "/images/cracker_barbabietola.jpeg",
         tags: [
-            "buono", "grasso"
+            "salato", "snack", "barbabietola", "salutare"
         ]
     },
     {
-        title: "Ciambellone",
-        content: "Un bellissimo ciambellone caldo",
-        image: "/images/ciambellone.jpeg",
+        title: "Pane Fritto Dolce",
+        content: "Fette di pane fritto dorate e spolverate di zucchero, una golosità della tradizione",
+        image: "/images/pane_fritto_dolce.jpeg",
         tags: [
-            "buono", "grasso"
+            "dolce", "fritto", "tradizionale"
         ]
     },
     {
-        title: "Ciambellone",
-        content: "Un bellissimo ciambellone caldo",
-        image: "/images/ciambellone.jpeg",
+        title: "Pasta Barbabietola",
+        content: "Pasta fresca colorata naturalmente con barbabietola, dal sapore delicato e dall'aspetto accattivante",
+        image: "/images/pasta_barbabietola.jpeg",
         tags: [
-            "buono", "grasso"
+            "primo piatto", "pasta fresca", "barbabietola", "colorata"
+        ]
+    },
+    {
+        title: "Torta Paesana",
+        content: "La tradizionale torta paesana lombarda con pane raffermo, cacao e uvetta",
+        image: "/images/torta_paesana.jpeg",
+        tags: [
+            "dolce", "tradizionale", "lombarda", "ricetta della nonna"
         ]
     }
 ]
